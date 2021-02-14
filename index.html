@@ -18,27 +18,33 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       body {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         font-family: 'Spartan';
         background-color: hsl(0, 0%, 100%);
         box-sizing: border-box;
+        max-width: 1440px;
       }
       html {
         position: relative;
       }
+      .bg-top {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       .main {
-        width: 1200px;
-        margin: 80px auto 0 auto;
+        width: 85%;
+        margin: 80px auto 50px auto;
       }
       .header-container {
         display: flex;
         justify-content: space-between;
-        width: 1200px;
         margin-bottom: 50px;
       }
       .header-flex {
-        width: 450px;
+        width: 45%;
       }
       .big-title {
         color: hsl(300, 43%, 22%);
@@ -48,7 +54,7 @@
         margin-bottom: 5px;
       }
       .description {
-        font-size:10.8px;
+        font-size: 10.8px;
         width: 350px;
       }
       .rate-container {
@@ -83,8 +89,8 @@
       }
       .footer-flex {
         background-color: hsl(300, 43%, 22%);
-        width: 300px;
-        padding: 30px;
+        width: 25%;
+        padding: 30px 20px;
         border-radius: 10px;
       }
       .footer-flex:nth-child(1) {
@@ -100,6 +106,7 @@
       .avatar img {
         border-radius: 50%;
         margin-right: 25px;
+        max-width: 80%;
       }
       .avatar-name {
         display: flex;
@@ -124,30 +131,29 @@
         color: hsl(228, 45%, 44%);
       }
       @media only screen and (max-width: 375px) {
+        body {
+          max-width: 375px;
+        }
         .main {
-          width: 375px;
+          max-width: 360px;
           text-align: center;
         }
         .header-container {
           display: block;
-          width: 375px;
           margin: 0 auto;
         }
         .header-flex {
-          width: 350px;
-          margin: auto;
-        }
-        .header-flex:nth-child(2) {
-          width: 320px;
-        }
-        .big-title, .description {
+          width: 100%;
           margin: 0 auto;
-          text-align: center;
+        }
+        .big-title {
+          font-size: 10.99vw;
+          width: auto;
         }
         .description {
-          font-size: 14px;
+          font-size: 4vw;
           margin: 15px auto 35px;
-          width: 320px;
+          width: auto;
         }
         .rate-container {
           padding: 12px;
@@ -167,27 +173,26 @@
         }
         .footer-container {
           display: block;
-          width: 365px;
+          max-width: 360px;
           margin: 0 auto;
         }
         .footer-flex {
-          width: 260px;
+          width: auto;
           display: block;
           margin: 0 auto;
+          padding: 25px;
         }
         .comment {
           font-size: .75em;
           text-align: justify;
-        }
-        .bg-top {
-          width: 375px;
+          word-break: break-all;
         }
       }
     </style>
   </head>
   <body>
     <div class="main">
-      <img class="bg-top" style="position: absolute; top: 0; left: 0;" src="images/bg-pattern-top-desktop.svg" alt="">
+      <img class="bg-top" src="images/bg-pattern-top-desktop.svg" alt="">
       <div class="header-container">
         <div class="header-flex">
           <div class="big-title">
@@ -217,7 +222,7 @@
         <div class="footer-flex">
           <div>
             <div class="avatar-name">
-              <div class="avatar"><img src="images/image-colton.jpg" alt=""></div>
+              <div class="avatar"><img src="images/image-colton.jpg" alt="Colton Smith"></div>
               <div>
                 Colton Smith
                 <p>Verified Buyer</p>
@@ -233,7 +238,7 @@
         <div class="footer-flex">
           <div>
             <div class="avatar-name">
-              <div class="avatar"><img src="images/image-irene.jpg" alt=""></div>
+              <div class="avatar"><img src="images/image-irene.jpg" alt="Irene Roberts"></div>
               <div>
                 Irene Roberts
                 <p>Verified Buyer</p>
@@ -248,7 +253,7 @@
         <div class="footer-flex">
           <div>
             <div class="avatar-name">
-              <div class="avatar"><img src="images/image-anne.jpg" alt=""></div>
+              <div class="avatar"><img src="images/image-anne.jpg" alt="Anne Wallace"></div>
               <div>
                 Anne Wallace
                 <p>Verified Buyer</p>
